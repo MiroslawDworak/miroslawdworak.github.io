@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Mirosław Dworak – Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Ikony -->
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+
+<canvas id="weatherCanvas"></canvas>
+
+<main class="layout">
+
+  <!-- LEWA STRONA -->
+  <section class="left">
+    <h1>Cześć, jestem<br><span>Mirosław Dworak</span></h1>
+
+    <p class="subtitle">
+      💻 Developer • 🚀 Technologie • 📚 Nauka i projekty
+    </p>
+
+    <div class="skills">
+
+      <div class="skill">
+        <i data-feather="code"></i>
+        <div>
+          <strong>Technologie</strong>
+          <p>HTML · CSS · JavaScript · Python</p>
+        </div>
+      </div>
+
+      <div class="skill">
+        <i data-feather="github"></i>
+        <div>
+          <strong>Git & GitHub</strong>
+          <p>Repozytoria · Markdown · Workflow</p>
+        </div>
+      </div>
+
+      <div class="skill">
+        <i data-feather="layers"></i>
+        <div>
+          <strong>Projekty</strong>
+          <p>Projekty edukacyjne · Eksperymenty · Gotowe rozwiązania</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRAWA STRONA -->
+  <section class="right">
+
+    <div class="card">
+      <div id="clock">00:00:00</div>
+      <div id="date"></div>
+      <div id="nameday"></div>
+    </div>
+
+    <div class="card">
+      <h2>Pogoda</h2>
+
+      <div class="weather-input">
+        <input id="city" placeholder="Wpisz miejscowość">
+        <button onclick="getWeather()">Sprawdź</button>
+      </div>
+
+      <div class="weather">
+        <div>🌡️ <span id="temp">--</span> °C</div>
+        <div>🌧️ <span id="rain">--</span></div>
+        <div>❄️ <span id="snow">--</span></div>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<script src="clock.js"></script>
+<script src="namedays.js"></script>
+<script src="weather.js"></script>
+<script src="canvas.js"></script>
+<script>
+  feather.replace();
+</script>
+
+</body>
+</html>
